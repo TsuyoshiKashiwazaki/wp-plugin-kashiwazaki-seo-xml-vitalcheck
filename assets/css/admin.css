@@ -1,0 +1,123 @@
+﻿.kashiwazaki-xml-vitalcheck .status-badge {
+    display: inline-block;
+    padding: .2em .6em;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1;
+    color: #fff
+}
+
+.kashiwazaki-xml-vitalcheck .status-badge.ok {
+    background: #46b450
+}
+
+.kashiwazaki-xml-vitalcheck .status-badge.warning {
+    background: #ffb900
+}
+
+.kashiwazaki-xml-vitalcheck .status-badge.error {
+    background: #dc3232
+}
+
+.kashiwazaki-xml-vitalcheck table thead th {
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.kashiwazaki-xml-vitalcheck table thead th:hover {
+    background-color: #f0f0f0;
+}
+
+.kashiwazaki-xml-vitalcheck table thead th.sorted-asc::after {
+    content: ' ▲';
+    color: #0073aa;
+    font-size: 12px;
+}
+
+.kashiwazaki-xml-vitalcheck table thead th.sorted-desc::after {
+    content: ' ▼';
+    color: #0073aa;
+    font-size: 12px;
+}
+
+.kashiwazaki-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.kashiwazaki-spinner-circle {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #0073aa;
+    border-radius: 50%;
+    animation: kashiwazaki-spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+/* インラインスピナー（テキストと一緒に使用） */
+.kashiwazaki-inline-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #0073aa;
+    border-radius: 50%;
+    animation: kashiwazaki-spin 1s linear infinite;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* ボタン内スピナー */
+.kashiwazaki-button-spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid #fff;
+    border-radius: 50%;
+    animation: kashiwazaki-spin 1s linear infinite;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+@keyframes kashiwazaki-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.kashiwazaki-spinner p {
+    margin: 0;
+    color: #666;
+    font-style: italic;
+}
+
+/* ページネーションスタイル */
+.kashiwazaki-pagination {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.kashiwazaki-pagination .button {
+    margin: 0 2px;
+    min-width: 40px;
+}
+
+.kashiwazaki-pagination .button-primary[disabled] {
+    background: #007cba;
+    border-color: #007cba;
+    color: white;
+    cursor: default;
+}
+
+.kashiwazaki-show-all {
+    margin-top: 10px !important;
+}
